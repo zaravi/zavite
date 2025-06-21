@@ -11,106 +11,26 @@ modules:
       - source: system
         destination: /
 
+  - from-file: packages.yml
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/lihaohong/yazi/repo/fedora-%OS_VERSION%/lihaohong-yazi-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-%OS_VERSION%/yalter-niri-fedora-%OS_VERSION%.repo
     install:
-      - corectrl # AMDGPU util
-      - alacritty # Terminal
-
-      - nu # Shell (Interactive)
-      - dash # Shell (POSIX)
-      - starship # Shell Prompt
-      - atuin # Shell History
-      - zoxide # Magic cd
-
-      - helix # Editor
-      - yazi # File Manager
-      - btop # System Monitor
-      
-      - syncthing # Local File Sync
-
-      # Virtualization
-      - qemu
-      - edk2-ovmf
-      - virt-manager
-      - virt-viewer
-      
-      - obs-studio
+      - dash
       - waydroid
-
-      - just
-      - npm
-      - pipx
-      - libxkbcommon-devel
-      - openssl-devel
-      - maven
-
+      - gdisk
+      - btrfs-progs
       - niri
       - gamescope
 
-      - gdisk
-      - btrfs-progs
-
-  - type: default-flatpaks
+  - from-file: flatpaks.yml  
+  - type: flatpaks
     notify: true
     system:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       repo-title: "Flathub (system-wide)"
       install:
-        - app.zen_browser.zen 
-        - org.gnome.Loupe
-        - com.github.dynobo.normcap
-        - com.usebottles.bottles
-        - dev.vencord.Vesktop
-        - fr.handbrake.ghb
-        - com.ranfdev.DistroShelf
-        - io.github.ungoogled_software.ungoogled_chromium
-        - md.obsidian.Obsidian
-        - org.archivekeep.ArchiveKeep
-        - org.gimp.GIMP
-        - org.gimp.GIMP.HEIC
-        - org.signal.Signal
-        - org.telegram.desktop
-        - org.telegram.desktop.webview
-        - org.fooyin.fooyin
-        - org.blender.Blender
-        - net.nokyan.Resources
-        - io.gitlab.liferooter.TextPieces
-        - io.github.nokse22.asciidraw
-        - io.github.nokse22.Exhibit
-        - io.github.nate_xyz.Chromatic
-        - io.bassi.Amberol
-        - io.github.TheWisker.Cavasik
-        - io.github.flattool.Warehouse
-        - io.gitlab.theevilskeleton.Upscaler
-        - app.drey.Warp
-        - app.fotema.Fotema
-        - app.fotema.Fotema.HEIC
-        - com.cassidyjames.butler
-        - com.konstantintutsch.Lock
-        - com.protonvpn.www
-        - com.rafaelmardojai.Blanket
-        - com.system76.Popsicle
-        - de.haeckerfelix.AudioSharing
-        - dev.geopjr.Calligraphy
-        - fr.romainvigier.MetadataCleaner
-        - fm.reaper.Reaper
-        - io.github.input_leap.input-leap
-        - org.gnome.Papers
-        - org.gnome.Showtime
-        - org.gnome.baobab
-        - org.kde.kdenlive
-        - org.kde.krita
-        - org.nickvision.tubeconverter
-        - org.musicbrainz.Picard
-        - org.remmina.Remmina
-        - org.onlyoffice.desktopeditors
-        - xyz.safeworlds.hiit
-        - io.unobserved.furtherance
         - dev.edfloreshz.CosmicTweaks
 
   - type: signing

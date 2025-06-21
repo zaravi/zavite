@@ -1,0 +1,18 @@
+name: kde-cleanup
+type: rpm-ostree
+remove:
+  - kwrite
+  - kfind
+  - khelpcenter
+  - kate
+  - kate-krunner-plugin
+  - kate-plugins
+  - kjournald
+  - kjournald-libs
+  - krfb
+  - krfb-libs
+  - kdebugsettings
+  - plasma-systemmonitor
+  - nvtop
+  - firewall-config
+  - ptyxis

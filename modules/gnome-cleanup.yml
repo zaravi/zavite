@@ -1,0 +1,5 @@
+name: gnome-cleanup
+type: rpm-ostree
+remove:
+  - nvtop
+  - ptyxis

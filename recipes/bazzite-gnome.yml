@@ -1,8 +1,8 @@
 ---
-name: bazzite
-description: bazzite-deck with modifications.
+name: bazzite-gnome
+description: bazzite-gnome with modifications.
 
-base-image: ghcr.io/ublue-os/bazzite
+base-image: ghcr.io/ublue-os/bazzite-gnome
 image-version: latest
 
 modules:
@@ -13,6 +13,5 @@ modules:
 
   - from-file: core-packages.yml
   - from-file: common-flatpaks.yml
-  - from-file: kde-cleanup.yml
 
   - type: signing
