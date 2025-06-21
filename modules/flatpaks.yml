@@ -1,5 +1,5 @@
 name: flatpaks
-type: flatpaks
+type: default-flatpaks
 notify: true
 system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
