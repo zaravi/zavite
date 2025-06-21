@@ -12,7 +12,10 @@ modules:
         destination: /
 
   - from-file: ../modules/packages.yml
+    source: local
   - from-file: ../modules/flatpaks.yml
+    source: local
   - from-file: ../modules/gnome-cleanup.yml
+    source: local
 
   - type: signing
