@@ -11,7 +11,8 @@ modules:
       - source: system
         destination: /
 
-  - from-file: core-packages.yml
-  - from-file: common-flatpaks.yml
+  - from-file: ../modules/packages.yml
+  - from-file: ../modules/flatpaks.yml
+  - from-file: ../modules/gnome-cleanup.yml
 
   - type: signing

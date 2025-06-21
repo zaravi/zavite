@@ -11,7 +11,7 @@ modules:
       - source: system
         destination: /
 
-  - from-file: packages.yml
+  - from-file: ../modules/packages.yml
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-%OS_VERSION%/yalter-niri-fedora-%OS_VERSION%.repo
@@ -23,8 +23,8 @@ modules:
       - niri
       - gamescope
 
-  - from-file: flatpaks.yml  
-  - type: flatpaks
+  - from-file: ../modules/flatpaks.yml  
+  - type: default-flatpaks
     notify: true
     system:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
